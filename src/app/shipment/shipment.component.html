@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div class="shipment-header flex-nowrap">
+    <mat-icon class="shipment-header__icon" (click)="goBack()">chevron_left</mat-icon>
+    <span class="shipment-header__seprator">|</span>
+    <span class="shipment-header__header">Shipement search result</span>
+    <button class="btn btn-outline-primary shipment-header__closebtn">
+      {{ "home.actionbtn.search" | translate }}
+    </button>
+  </div>
+  <br>
+  <br>
+  @for (item of shipments; track item.OrderNo) {
+    <div class="shipment-detail flex-nowrap">
+        <div class="shipment-detail__child">
+           <div class="order">{{item.OrderNo}}</div>
+           <div>{{item.ShipmentLines.TotalNumberOfRecords}} {{'shipments.shipmentlines.totalNumberOfRecords' | translate }}</div>
+           <div>{{'shipments.shipmentlines.totalNumberOfRecords' | translate }}: {{item.ScacAndService}}</div>
+           <div>{{'shipments.shipment.scacAndService' | translate}} <span class="shipmentno">{{item.ShipmentNo}}</span></div>
+        </div>
+        <div class="shipment-detail__child">
+            <div class="status">{{item.Status}}</div>
+            <div>{{'shipments.Shipment.assignedToUserId' | translate}} {{item.AssignedToUserId}}</div>
+            <div>{{'shipments.Shipment.expectedShipmentDate' | translate}} {{item.ExpectedShipmentDate}}</div>
+        </div>
+        <div class="shipment-detail__child">
+            <div>{{'shipments.shipment.customerinfo' | translate}}</div>
+            <div>{{item.BillToAddress.FirstName}} {{item.BillToAddress.LastName}}</div>
+            <div>{{item.BillToAddress.DayPhone}}</div>
+            <div>{{item.BillToAddress.EMailID}}</div>
+        </div>
+    </div>
+  }
+
+</div> 

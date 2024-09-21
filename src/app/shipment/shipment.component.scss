@@ -1,0 +1,56 @@
+.wrapper {
+    background: #Ffffff;
+}
+.shipment-detail {
+    margin: .5rem;
+    padding: 2rem;
+    border-bottom: 1px solid black;
+    background: #F5F5f5;
+    transition: box-shadow 0.3s ease; /* Add smooth transition */
+    &:hover {
+       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+    } 
+    
+    &__child {
+        flex: 1;
+
+        .shipmentno {
+            color:skyblue;
+            cursor: pointer;
+        }
+
+        .status {
+            color:purple;
+        }
+
+        .order {
+            font-size: 1.1rem;
+        }
+    }
+}
+.shipment-header {
+  margin: .5rem;
+  background: #F5F5f5;
+  height: 3rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: .5rem;
+  box-shadow: 0 2px 2px rgba(0,0,0,.24),0 0 2px rgba(0,0,0,.12);
+  margin-bottom: 1px solid black;
+
+  &__icon {
+    font-size: 1.5rem;
+    padding-top: .05rem;
+    cursor: pointer;
+  }
+
+  &__seprator {
+    margin: 0rem 0.25rem;
+    margin-right: .5rem;
+  }
+
+  &__header {
+    flex: 1;
+  }
+  
+}

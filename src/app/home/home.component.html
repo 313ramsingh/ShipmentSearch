@@ -1,0 +1,28 @@
+<div class="heading">{{'home.Heading' | translate }}</div>
+<div class="card shadow p-3 mb-5 bg-white">
+    <div class="card__heading">{{'home.subheading' | translate }} </div>
+    <form class="form">
+        <div class="form__feild form-group">
+            <input type="text" class="form-control" id="order" [placeholder]="'home.form.order'|translate">
+        </div>
+        <div class="form__feild form-group">
+            <input type="text" class="form-control" id="shipment" [placeholder]="'home.form.shipment'|translate">
+        </div>
+        <div class="form__feild form-group">
+            <input type="text" class="form-control" id="firstname" [placeholder]="'home.form.firstname'|translate">
+        </div>
+        <div class="form__feild form-group">
+            <input type="text" class="form-control" id="lastname" [placeholder]="'home.form.lastname'|translate">
+        </div>
+        <div class="form__feild form-group">
+            <input type="text" class="form-control" id="phonenumber" [placeholder]="'home.form.phoneno'|translate">
+        </div>
+        <div class="form__feild form-group">
+            <input type="email" class="form-control" id="emailid" aria-describedby="emailHelp" [placeholder]="'home.form.emailid'|translate">
+        </div>
+        <div class="form__action">
+           <button type="submit" class="btn btn-outline-primary">{{'home.actionbtn.reset' | translate }}</button>
+           <button type="submit" class="btn btn-primary" [routerLink]="'/shipping'">{{'home.actionbtn.search' | translate }}</button>
+        </div>
+    </form>
+</div>

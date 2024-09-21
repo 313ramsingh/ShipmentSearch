@@ -1,0 +1,20 @@
+{
+    "header.appName": "IBM Store Engagement",
+    "header.storeAsscociate": "Store Associate",
+    "home.Heading": "What do you want to do?",
+    "home.subheading": "Shipment Search",
+    "home.actionbtn.search": "Search",
+    "home.actionbtn.reset": "Reset",
+    "home.form.firstname": "First Name",
+    "home.form.lastname": "Last Name",
+    "home.form.emailid": "Email ID",
+    "home.form.phoneno": "Phone number",
+    "home.form.shipment": "Order #",
+    "home.form.order": "Shipment #",
+    "shipments.totalNumberOfRecords": "results",
+    "shipments.shipmentlines.totalNumberOfRecords": "products",
+    "shipments.shipment.scacAndService": "Carrier #",
+    "shipments.Shipment.assignedToUserId": "Assigned to:",
+    "shipments.Shipment.expectedShipmentDate": "Expected pickup date:",
+    "shipments.shipment.customerinfo": "Customer info"
+}
