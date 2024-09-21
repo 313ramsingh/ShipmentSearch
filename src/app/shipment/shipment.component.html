@@ -1,21 +1,16 @@
 <div class="wrapper">
-  <div class="shipment-header flex-nowrap">
-    <mat-icon class="shipment-header__icon" (click)="goBack()">chevron_left</mat-icon>
-    <span class="shipment-header__seprator">|</span>
-    <span class="shipment-header__header">Shipement search result</span>
-    <button class="btn btn-outline-primary shipment-header__closebtn">
-      {{ "home.actionbtn.search" | translate }}
-    </button>
+  <app-sub-header [iconValue]="'close'" [userString]="'Shipement search result'"></app-sub-header>
+  <div>
+    <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+    <mat-icon (click)="''">filter_alt</mat-icon>
   </div>
-  <br>
-  <br>
   @for (item of shipments; track item.OrderNo) {
-    <div class="shipment-detail flex-nowrap">
+    <div class="flex-nowrap shipment-detail">
         <div class="shipment-detail__child">
            <div class="order">{{item.OrderNo}}</div>
            <div>{{item.ShipmentLines.TotalNumberOfRecords}} {{'shipments.shipmentlines.totalNumberOfRecords' | translate }}</div>
            <div>{{'shipments.shipmentlines.totalNumberOfRecords' | translate }}: {{item.ScacAndService}}</div>
-           <div>{{'shipments.shipment.scacAndService' | translate}} <span class="shipmentno">{{item.ShipmentNo}}</span></div>
+           <div>{{'shipments.shipment.scacAndService' | translate}} <span class="shipmentno" (click)="navigateToShipmentDetail(item.ShipmentNo)">{{item.ShipmentNo}}</span></div>
         </div>
         <div class="shipment-detail__child">
             <div class="status">{{item.Status}}</div>

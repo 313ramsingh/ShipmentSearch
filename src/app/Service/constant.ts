@@ -1,0 +1,2 @@
+export const API_URL = ['Ready for Backroom Pick', 'Backroom Pick In Progress', 'Ready for Customer Pickup', 'Packing In Progress', 'Packed', 'Shipped', 'Cancelled'];
+export const DEFAULT_LANGUAGE = 'en';

@@ -1,0 +1,64 @@
+<div class="wrapper">
+  <app-sub-header [iconValue]="'check'" [userString]="'Shipement search result'"></app-sub-header>
+  <div class="product-detail">
+    <div class="product-detail__content flex-nowrap">
+
+      <div class="product-detail__content__child">
+        <div>{{ "shipmentdetail.packinginprogress" | translate }}</div>
+        <div>{{data.ShipmentNo}}</div>
+        <br>
+        <div>{{ "shipments.shipment.scacAndService" | translate }}</div>
+        <div>{{data.ScacAndService}}</div>
+        <br>
+        <div>{{ "shipments.Shipment.assignedToUserId" | translate }}</div>
+        <div>{{data.AssignedToUserId}}</div>
+        <br>
+        <div>{{ "shipmentdetail.toaddress" | translate }}</div>
+        <div>{{data.ToAddress.FirstName}} {{data.ToAddress.LastName}}</div>
+        <div>{{data.ToAddress.AddressLine1}}</div>
+        <div>{{data.ToAddress.City}} {{data.ToAddress.State}} {{data.ToAddress.ZipCode}}</div>
+        <div>{{data.ToAddress.Country}}</div>
+        <br>
+      </div>
+
+      <div class="product-detail__content__child">
+        <div>{{ "shipmentdetail.expectedshipmentdate" | translate }}</div>
+        <div>{{data.ExpectedShipmentDate}}</div>
+        <br>
+        <div>{{ "shipments.shipment.customerinfo" | translate }}</div>
+        <div>{{data.BillToAddress.FirstName}} {{data.BillToAddress.LastName}}</div>
+        <div>{{data.BillToAddress.EmailID}}</div>
+        <div>{{data.BillToAddress.Phonenumber}}</div>
+        <br>
+        <div>{{ "shipmentdetail.billtoaddress" | translate }}</div>
+        <div>{{data.BillToAddress.FirstName}} {{data.BillToAddress.LastName}}</div>
+        <div>{{data.BillToAddress.AddressLine1}}</div>
+        <div>{{data.BillToAddress.City}} {{data.BillToAddress.State}} {{data.BillToAddress.ZipCode}}</div>
+        <div>{{data.BillToAddress.Country}}</div>
+        <br>
+      </div>
+
+    </div>
+
+    <div class="product-detail__records">
+      <div class="product-detail__records__count">
+        {{ "shipmentdetail.shipmentlines.products" | translate }} ({{data.ShipmentLines.TotalNumberOfRecords}})
+      </div>
+      <mat-divider></mat-divider>
+      <div class="flex-wrap">
+        @for (item of data.ShipmentLines.ShipmentLine; track item.ShipmentLineKey) {
+        <div class="product-detail__records__product-card flex-nowrap">
+
+          <img [src]="item.OrderLine.ItemDetails.ImageUrl" alt="abc" width="128" height="128">
+          <div class="product-detail__records__product-card__wrapper">
+            <p class="description">{{item.OrderLine.ItemDetails.Description}}</p>
+            <p>{{'shipmentdetail.OrderLine.ItemDetails.id' | translate}}: {{item.OrderLine.ItemDetails.ItemID}}</p>
+            <p>{{'shipmentdetail.OrderLine.ItemDetails.qantity' | translate}}:{{item.Quantity}}
+              {{item.OrderLine.ItemDetails.DisplayUnitOfMeasure}} </p>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

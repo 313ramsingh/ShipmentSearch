@@ -17,6 +17,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HomeComponent } from './home/home.component';
 import { ShipmentComponent } from './shipment/shipment.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { ShipmentDetailsComponent } from './shipment/shipment-details/shipment-details.component';
+import { SubHeaderComponent } from './header/sub-header/sub-header.component';
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
   }
@@ -25,7 +27,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ShipmentComponent
+    ShipmentComponent,
+    ShipmentDetailsComponent,
+    SubHeaderComponent
   ],
   imports: [
     BrowserModule,

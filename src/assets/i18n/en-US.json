@@ -5,6 +5,7 @@
     "home.subheading": "Shipment Search",
     "home.actionbtn.search": "Search",
     "home.actionbtn.reset": "Reset",
+    "home.actionbtn.close": "Close",
     "home.form.firstname": "First Name",
     "home.form.lastname": "Last Name",
     "home.form.emailid": "Email ID",
@@ -16,5 +17,13 @@
     "shipments.shipment.scacAndService": "Carrier #",
     "shipments.Shipment.assignedToUserId": "Assigned to:",
     "shipments.Shipment.expectedShipmentDate": "Expected pickup date:",
-    "shipments.shipment.customerinfo": "Customer info"
+    "shipments.shipment.customerinfo": "Customer info",
+    "shipmentdetail.toaddress": "Ship to",
+    "shipmentdetail.billtoaddress": "Bill to",
+    "shipmentdetail.sipment.number": "Shipment number",
+    "shipmentdetail.packinginprogress": "Packing in Progress",
+    "shipmentdetail.expectedshipmentdate": "Expected ship date",
+    "shipmentdetail.shipmentlines.products": "Product",
+    "shipmentdetail.OrderLine.ItemDetails.id": "Product ID",
+    "shipmentdetail.OrderLine.ItemDetails.qantity": "Quantity"
 }
