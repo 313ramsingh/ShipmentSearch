@@ -10,25 +10,24 @@ import { Location } from '@angular/common';
 })
 export class ShipmentDetailsComponent {
 
-  private shipmentId?:string;
-  public data?:any;
+  private shipmentId?: string;
+  public data?: any;
 
-  constructor(private route: ActivatedRoute, private apidataservice: ApidataService,  private location: Location) {}
-  
+  constructor(private route: ActivatedRoute, private apidataservice: ApidataService, private location: Location) { }
+
   ngOnInit(): void {
+
     this.route.params.subscribe(params => {
-      this.shipmentId = params['id']; 
+      this.shipmentId = params['productId'];
     });
 
-    this.apidataservice.shipmentDetailData().subscribe((data)=>{
-        this.data = data.Shipment;
+    this.apidataservice.shipmentDetailData().subscribe((data) => {
+      data.Shipment.forEach((shipmentData: any) => {
+        if (shipmentData?.ShipmentNo == this.shipmentId)
+          this.data = shipmentData;
+      })
+
     })
-    
   }
-
-  goBack(): void {
-    this.location.back();
-  }
-
 
 }

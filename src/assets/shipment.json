@@ -1,6 +1,6 @@
 {
     "Shipments": {
-        "TotalNumberOfRecords": "2",
+        "TotalNumberOfRecords": "13",
         "Shipment": [
             {
                 "AssignedToUserId": "abrooks",
@@ -24,7 +24,7 @@
                 }
             },
             {
-                "AssignedToUserId": "amgr",
+                "AssignedToUserId": "amgrwdaf",
                 "DeliveryMethod": "PICK",
                 "ExpectedShipmentDate": "28-10-2017",
                 "OrderNo": "PICK1000001",
@@ -45,24 +45,213 @@
                 }
             },
             {
-                "AssignedToUserId": "amgrwdaf",
+                "AssignedToUserId": "user1",
                 "DeliveryMethod": "PICK",
-                "ExpectedShipmentDate": "28-10-2017",
-                "OrderNo": "PICK1000001",
+                "ExpectedShipmentDate": "01-11-2017",
+                "OrderNo": "PICK1000002",
                 "ScacAndService": "",
-                "ShipNode": "Mtrx_Store_1",
-                "ShipmentKey": "PICK1000001_SHPKEY",
-                "ShipmentNo": "PICK1000001SHPNO",
+                "ShipNode": "Mtrx_Store_2",
+                "ShipmentKey": "PICK1000002_SHPKEY",
+                "ShipmentNo": "PICK1000002SHPNO",
                 "Status": "Ready for Backroom Pick",
                 "BillToAddress": {
-                    "DayPhone": "1234567890",
-                    "EMailID": "adoyle@org.com",
-                    "FirstName": "Abby",
-                    "LastName": "Doyle",
-                    "PersonInfoKey": "2000001"
+                    "DayPhone": "2345678901",
+                    "EMailID": "bsmith@org.com",
+                    "FirstName": "Bob",
+                    "LastName": "Smith",
+                    "PersonInfoKey": "2000002"
+                },
+                "ShipmentLines": {
+                    "TotalNumberOfRecords": "5"
+                }
+            },
+            {
+                "AssignedToUserId": "user2",
+                "DeliveryMethod": "PICK",
+                "ExpectedShipmentDate": "02-11-2017",
+                "OrderNo": "PICK1000003",
+                "ScacAndService": "",
+                "ShipNode": "Mtrx_Store_3",
+                "ShipmentKey": "PICK1000003_SHPKEY",
+                "ShipmentNo": "PICK1000003SHPNO",
+                "Status": "Ready for Backroom Pick",
+                "BillToAddress": {
+                    "DayPhone": "3456789012",
+                    "EMailID": "cjones@org.com",
+                    "FirstName": "Carol",
+                    "LastName": "Jones",
+                    "PersonInfoKey": "2000003"
+                },
+                "ShipmentLines": {
+                    "TotalNumberOfRecords": "1"
+                }
+            },
+            {
+                "AssignedToUserId": "user3",
+                "DeliveryMethod": "PICK",
+                "ExpectedShipmentDate": "03-11-2017",
+                "OrderNo": "PICK1000004",
+                "ScacAndService": "",
+                "ShipNode": "Mtrx_Store_4",
+                "ShipmentKey": "PICK1000004_SHPKEY",
+                "ShipmentNo": "PICK1000004SHPNO",
+                "Status": "Ready for Backroom Pick",
+                "BillToAddress": {
+                    "DayPhone": "4567890123",
+                    "EMailID": "dlee@org.com",
+                    "FirstName": "David",
+                    "LastName": "Lee",
+                    "PersonInfoKey": "2000004"
+                },
+                "ShipmentLines": {
+                    "TotalNumberOfRecords": "3"
+                }
+            },
+            {
+                "AssignedToUserId": "user4",
+                "DeliveryMethod": "PICK",
+                "ExpectedShipmentDate": "04-11-2017",
+                "OrderNo": "PICK1000005",
+                "ScacAndService": "",
+                "ShipNode": "Mtrx_Store_5",
+                "ShipmentKey": "PICK1000005_SHPKEY",
+                "ShipmentNo": "PICK1000005SHPNO",
+                "Status": "Ready for Backroom Pick",
+                "BillToAddress": {
+                    "DayPhone": "5678901234",
+                    "EMailID": "ewilliams@org.com",
+                    "FirstName": "Emma",
+                    "LastName": "Williams",
+                    "PersonInfoKey": "2000005"
+                },
+                "ShipmentLines": {
+                    "TotalNumberOfRecords": "2"
+                }
+            },
+            {
+                "AssignedToUserId": "user5",
+                "DeliveryMethod": "PICK",
+                "ExpectedShipmentDate": "05-11-2017",
+                "OrderNo": "PICK1000006",
+                "ScacAndService": "",
+                "ShipNode": "Mtrx_Store_6",
+                "ShipmentKey": "PICK1000006_SHPKEY",
+                "ShipmentNo": "PICK1000006SHPNO",
+                "Status": "Ready for Backroom Pick",
+                "BillToAddress": {
+                    "DayPhone": "6789012345",
+                    "EMailID": "fmartin@org.com",
+                    "FirstName": "Frank",
+                    "LastName": "Martin",
+                    "PersonInfoKey": "2000006"
+                },
+                "ShipmentLines": {
+                    "TotalNumberOfRecords": "1"
+                }
+            },
+            {
+                "AssignedToUserId": "user6",
+                "DeliveryMethod": "PICK",
+                "ExpectedShipmentDate": "06-11-2017",
+                "OrderNo": "PICK1000007",
+                "ScacAndService": "",
+                "ShipNode": "Mtrx_Store_7",
+                "ShipmentKey": "PICK1000007_SHPKEY",
+                "ShipmentNo": "PICK1000007SHPNO",
+                "Status": "Ready for Backroom Pick",
+                "BillToAddress": {
+                    "DayPhone": "7890123456",
+                    "EMailID": "gthomas@org.com",
+                    "FirstName": "Grace",
+                    "LastName": "Thomas",
+                    "PersonInfoKey": "2000007"
                 },
                 "ShipmentLines": {
                     "TotalNumberOfRecords": "6"
+                }
+            },
+            {
+                "AssignedToUserId": "user7",
+                "DeliveryMethod": "PICK",
+                "ExpectedShipmentDate": "07-11-2017",
+                "OrderNo": "PICK1000008",
+                "ScacAndService": "",
+                "ShipNode": "Mtrx_Store_8",
+                "ShipmentKey": "PICK1000008_SHPKEY",
+                "ShipmentNo": "PICK1000008SHPNO",
+                "Status": "Ready for Backroom Pick",
+                "BillToAddress": {
+                    "DayPhone": "8901234567",
+                    "EMailID": "hrobinson@org.com",
+                    "FirstName": "Hannah",
+                    "LastName": "Robinson",
+                    "PersonInfoKey": "2000008"
+                },
+                "ShipmentLines": {
+                    "TotalNumberOfRecords": "5"
+                }
+            },
+            {
+                "AssignedToUserId": "user8",
+                "DeliveryMethod": "PICK",
+                "ExpectedShipmentDate": "08-11-2017",
+                "OrderNo": "PICK1000009",
+                "ScacAndService": "",
+                "ShipNode": "Mtrx_Store_9",
+                "ShipmentKey": "PICK1000009_SHPKEY",
+                "ShipmentNo": "PICK1000009SHPNO",
+                "Status": "Ready for Backroom Pick",
+                "BillToAddress": {
+                    "DayPhone": "9012345678",
+                    "EMailID": "ijackson@org.com",
+                    "FirstName": "Ian",
+                    "LastName": "Jackson",
+                    "PersonInfoKey": "2000009"
+                },
+                "ShipmentLines": {
+                    "TotalNumberOfRecords": "4"
+                }
+            },
+            {
+                "AssignedToUserId": "user9",
+                "DeliveryMethod": "PICK",
+                "ExpectedShipmentDate": "09-11-2017",
+                "OrderNo": "PICK1000010",
+                "ScacAndService": "",
+                "ShipNode": "Mtrx_Store_10",
+                "ShipmentKey": "PICK1000010_SHPKEY",
+                "ShipmentNo": "PICK1000010SHPNO",
+                "Status": "Ready for Backroom Pick",
+                "BillToAddress": {
+                    "DayPhone": "0123456789",
+                    "EMailID": "kwhite@org.com",
+                    "FirstName": "Karen",
+                    "LastName": "White",
+                    "PersonInfoKey": "2000010"
+                },
+                "ShipmentLines": {
+                    "TotalNumberOfRecords": "3"
+                }
+            },
+            {
+                "AssignedToUserId": "user10",
+                "DeliveryMethod": "PICK",
+                "ExpectedShipmentDate": "10-11-2017",
+                "OrderNo": "PICK1000011",
+                "ScacAndService": "",
+                "ShipNode": "Mtrx_Store_11",
+                "ShipmentKey": "PICK1000011_SHPKEY",
+                "ShipmentNo": "PICK1000011SHPNO",
+                "Status": "Ready for Backroom Pick",
+                "BillToAddress": {
+                    "DayPhone": "1234567890",
+                    "EMailID": "lmiller@org.com",
+                    "FirstName": "Liam",
+                    "LastName": "Miller",
+                    "PersonInfoKey": "2000011"
+                },
+                "ShipmentLines": {
+                    "TotalNumberOfRecords": "2"
                 }
             }
         ]

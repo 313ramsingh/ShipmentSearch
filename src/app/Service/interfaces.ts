@@ -1,4 +1,5 @@
 export interface ShipmentData {
+    [key: string]: any;
     AssignedToUserId: string;
     DeliveryMethod: string;
     ExpectedShipmentDate: string;
@@ -9,6 +10,7 @@ export interface ShipmentData {
     ShipmentNo: string;
     Status: string;
     BillToAddress: {
+      [key: string]: any;
       DayPhone: string;
       EMailID: string;
       FirstName: string;

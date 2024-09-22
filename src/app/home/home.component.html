@@ -1,28 +1,28 @@
 <div class="heading">{{'home.Heading' | translate }}</div>
 <div class="card shadow p-3 mb-5 bg-white">
     <div class="card__heading">{{'home.subheading' | translate }} </div>
-    <form class="form">
+    <form class="form" [formGroup]="entryForm">
         <div class="form__feild form-group">
-            <input type="text" class="form-control" id="order" [placeholder]="'home.form.order'|translate">
+            <input type="text" class="form-control" id="order" [placeholder]="'home.form.order'|translate" formControlName="OrderNo">
         </div>
         <div class="form__feild form-group">
-            <input type="text" class="form-control" id="shipment" [placeholder]="'home.form.shipment'|translate">
+            <input type="text" class="form-control" id="shipment" [placeholder]="'home.form.shipment'|translate" formControlName="ShipmentNo">
         </div>
         <div class="form__feild form-group">
-            <input type="text" class="form-control" id="firstname" [placeholder]="'home.form.firstname'|translate">
+            <input type="text" class="form-control" id="firstname" [placeholder]="'home.form.firstname'|translate" formControlName="FirstName">
         </div>
         <div class="form__feild form-group">
-            <input type="text" class="form-control" id="lastname" [placeholder]="'home.form.lastname'|translate">
+            <input type="text" class="form-control" id="lastname" [placeholder]="'home.form.lastname'|translate" formControlName="LastName">
         </div>
         <div class="form__feild form-group">
-            <input type="text" class="form-control" id="phonenumber" [placeholder]="'home.form.phoneno'|translate">
+            <input type="text" class="form-control" id="phonenumber" [placeholder]="'home.form.phoneno'|translate" formControlName="DayPhone">
         </div>
         <div class="form__feild form-group">
-            <input type="email" class="form-control" id="emailid" aria-describedby="emailHelp" [placeholder]="'home.form.emailid'|translate">
+            <input type="email" class="form-control" id="emailid" aria-describedby="emailHelp" [placeholder]="'home.form.emailid'|translate" formControlName="EMailID">
         </div>
         <div class="form__action">
-           <button type="submit" class="btn btn-outline-primary">{{'home.actionbtn.reset' | translate }}</button>
-           <button type="submit" class="btn btn-primary" [routerLink]="'/shipping'">{{'home.actionbtn.search' | translate }}</button>
+           <button type="submit" class="btn btn-outline-primary" (click)="reset()">{{'home.actionbtn.reset' | translate }}</button>
+           <button type="submit" class="btn btn-primary" (click)="search()" >{{'home.actionbtn.search' | translate }}</button>
         </div>
     </form>
 </div>
