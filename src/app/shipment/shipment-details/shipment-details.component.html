@@ -1,43 +1,60 @@
 <div class="wrapper">
-  <app-sub-header [iconValue]="'check'" [userString]="'Shipement search result'"></app-sub-header>
+  <app-sub-header [iconValue]="'check'" [userString]="'Shipement Summary'"></app-sub-header>
   <div class="product-detail">
-    <div class="product-detail__content flex-nowrap">
+    <div class="product-detail__content flex-nowrap" [ngClass]="{'trim-height': !showFullDetails}">
 
       <div class="product-detail__content__child">
-        <div>{{ "shipmentdetail.packinginprogress" | translate }}</div>
+        <div class="shipment-no">{{ "shipmentdetail.packinginprogress" | translate }}</div>
+        <div >{{ "shipmentdetail.sipment.number" | translate }}</div>
         <div>{{data.ShipmentNo}}</div>
         <br>
-        <div>{{ "shipments.shipment.scacAndService" | translate }}</div>
-        <div>{{data.ScacAndService}}</div>
-        <br>
-        <div>{{ "shipments.Shipment.assignedToUserId" | translate }}</div>
-        <div>{{data.AssignedToUserId}}</div>
-        <br>
-        <div>{{ "shipmentdetail.toaddress" | translate }}</div>
-        <div>{{data.ToAddress.FirstName}} {{data.ToAddress.LastName}}</div>
-        <div>{{data.ToAddress.AddressLine1}}</div>
-        <div>{{data.ToAddress.City}} {{data.ToAddress.State}} {{data.ToAddress.ZipCode}}</div>
-        <div>{{data.ToAddress.Country}}</div>
-        <br>
+        <ng-container *ngIf="showFullDetails">
+          <div>{{ "shipments.shipment.scacAndService" | translate }}</div>
+          <div>{{data.ScacAndService}}</div>
+          <br>
+          <div>{{ "shipments.Shipment.assignedToUserId" | translate }}</div>
+          <div>{{data.AssignedToUserId}}</div>
+          <br>
+          <div>{{ "shipmentdetail.toaddress" | translate }}</div>
+          <div>{{data.ToAddress.FirstName}} {{data.ToAddress.LastName}}</div>
+          <div>{{data.ToAddress.AddressLine1}}</div>
+          <div>{{data.ToAddress.City}}, {{data.ToAddress.State}}, {{data.ToAddress.ZipCode}}</div>
+          <div>{{data.ToAddress.Country}}</div>
+          <br>
+        </ng-container>
       </div>
 
-      <div class="product-detail__content__child">
-        <div>{{ "shipmentdetail.expectedshipmentdate" | translate }}</div>
+      <div class="product-detail__content__child" >
+        <div><span *ngIf="data.DeliveryMethod == 'PICK'">{{'shipments.Shipment.expectedShipmentDate' | translate}}</span> <span *ngIf="data.DeliveryMethod == 'SHP'">{{ "shipmentdetail.expectedshipmentdate" | translate }}</span></div>
         <div>{{data.ExpectedShipmentDate}}</div>
         <br>
-        <div>{{ "shipments.shipment.customerinfo" | translate }}</div>
-        <div>{{data.BillToAddress.FirstName}} {{data.BillToAddress.LastName}}</div>
-        <div>{{data.BillToAddress.EmailID}}</div>
-        <div>{{data.BillToAddress.Phonenumber}}</div>
-        <br>
-        <div>{{ "shipmentdetail.billtoaddress" | translate }}</div>
-        <div>{{data.BillToAddress.FirstName}} {{data.BillToAddress.LastName}}</div>
-        <div>{{data.BillToAddress.AddressLine1}}</div>
-        <div>{{data.BillToAddress.City}} {{data.BillToAddress.State}} {{data.BillToAddress.ZipCode}}</div>
-        <div>{{data.BillToAddress.Country}}</div>
-        <br>
+        <ng-container *ngIf="showFullDetails">
+          <div>{{ "shipments.shipment.customerinfo" | translate }}</div>
+          <div>{{data.BillToAddress.FirstName}} {{data.BillToAddress.LastName}}</div>
+          <div>{{data.BillToAddress.EmailID}}</div>
+          <div>{{data.BillToAddress.Phonenumber}}</div>
+          <br>
+          <div>{{ "shipmentdetail.billtoaddress" | translate }}</div>
+          <div>{{data.BillToAddress.FirstName}} {{data.BillToAddress.LastName}}</div>
+          <div>{{data.BillToAddress.AddressLine1}}</div>
+          <div>{{data.BillToAddress.City}} {{data.BillToAddress.State}} {{data.BillToAddress.ZipCode}}</div>
+          <div>{{data.BillToAddress.Country}}</div>
+          <br>
+        </ng-container>
+      </div>
+      
+      <div class="product-detail__content__child hide-sm" *ngIf="!showFullDetails">
+        <div>{{ "shipmentdetail.toaddress" | translate }}</div>
+        <div>{{data.ToAddress.City}}, {{data.ToAddress.State}}, {{data.ToAddress.ZipCode}}</div>
       </div>
 
+      <div class="info" (click)="showFullDetails=!showFullDetails">
+        @if (showFullDetails) {
+        <span>{{ "shipments.hide.info" | translate }}</span>
+        } @else {
+        <span>{{ "shipments.show.info" | translate }}</span>
+        }
+      </div>
     </div>
 
     <div class="product-detail__records">
@@ -49,7 +66,7 @@
         @for (item of data.ShipmentLines.ShipmentLine; track item.ShipmentLineKey) {
         <div class="product-detail__records__product-card flex-nowrap">
 
-          <img [src]="item.OrderLine.ItemDetails.ImageUrl" alt="abc" width="128" height="128">
+          <img [src]="item.OrderLine.ItemDetails.ImageUrl" alt="no image" width="128" height="128">
           <div class="product-detail__records__product-card__wrapper">
             <p class="description">{{item.OrderLine.ItemDetails.Description}}</p>
             <p>{{'shipmentdetail.OrderLine.ItemDetails.id' | translate}}: {{item.OrderLine.ItemDetails.ItemID}}</p>

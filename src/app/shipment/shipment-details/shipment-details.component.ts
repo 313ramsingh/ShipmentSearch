@@ -12,6 +12,7 @@ export class ShipmentDetailsComponent {
 
   private shipmentId?: string;
   public data?: any;
+  public showFullDetails?: boolean;
 
   constructor(private route: ActivatedRoute, private apidataservice: ApidataService, private location: Location) { }
 

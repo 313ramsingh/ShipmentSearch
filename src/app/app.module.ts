@@ -14,7 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from './home/home.component';
 import { ShipmentComponent } from './shipment/shipment.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { ShipmentDetailsComponent } from './shipment/shipment-details/shipment-details.component';
@@ -29,7 +29,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent,
     ShipmentComponent,
     ShipmentDetailsComponent,
     SubHeaderComponent

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ShipmentData } from '../Service/interfaces';
 import { Router } from '@angular/router';
-import { SHIPMENT_STATUS } from '../Service/constant';
+import { PICK, SHIP, SHIPMENT_STATUS } from '../Service/constant';
 import { FormControl, FormGroup } from '@angular/forms';
 import { SharedVariableServices } from '../Service/shared.variables.services';
 
@@ -23,6 +23,7 @@ export class ShipmentComponent {
     4: new FormControl(true),
     5: new FormControl(true),
     6: new FormControl(true),
+    7: new FormControl(true),
   });
 
   constructor(private router: Router, private sharedVariableService: SharedVariableServices ) {
@@ -44,7 +45,8 @@ export class ShipmentComponent {
       3: true,
       4: true,
       5: true,
-      6: true
+      6: true,
+      7: true
     });
     this.shipments = this.sharedVariableService.shipmentsRecords;
     popover.close();

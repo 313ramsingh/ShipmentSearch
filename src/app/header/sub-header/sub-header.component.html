@@ -1,7 +1,6 @@
 <div class="shipment-header flex-nowrap">
     <mat-icon class="shipment-header__icon" (click)="goBack()">chevron_left</mat-icon>
-    <span class="shipment-header__seprator">|</span>
-    <span class="shipment-header__header">{{userString}}</span>
+    <span class="shipment-header__header">{{userString}}<br><span class="order-no">{{shipmentId}}</span></span>
     <button class="btn btn-outline-primary shipment-header__closebtn" (click)="navigateToHome()">
       {{ "home.actionbtn.close" | translate }}
     </button>

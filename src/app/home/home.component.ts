@@ -3,8 +3,9 @@ import { ApidataService } from '../Service/apidata.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { SharedVariableServices } from '../Service/shared.variables.services';
 import { ShipmentData } from '../Service/interfaces';
-import { ORDER_NO, SHIPMENT_NO } from '../Service/constant';
+import { DEFAULT_LANGUAGE, ORDER_NO, SHIPMENT_NO } from '../Service/constant';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,9 @@ export class HomeComponent {
 
   constructor(private apidataservice: ApidataService,
     private sharedVariableService: SharedVariableServices,
+    private translateService: TranslateService,
     private router: Router) {
+    this.translateService.setDefaultLang(DEFAULT_LANGUAGE);
     this.apidataservice.shipmentData().subscribe((response) => {
       this.data = response?.Shipments?.Shipment;
     });

@@ -3,7 +3,7 @@
   <div class="filter-icon flex-nowrap">
       <div><span class="record-count">{{shipments.length}} </span>{{'shipments.totalNumberOfRecords' | translate}}</div>
       <span class="example-spacer"></span>
-    <button type="button" class="btn btn-secondary" [ngbPopover]="popContent" #p="ngbPopover" placement="bottom-right" popoverTitle="Refine" [autoClose]="false">
+    <button type="button" class="btn btn-outline-primary" [ngbPopover]="popContent" #p="ngbPopover" placement="bottom-right" popoverTitle="Refine" [autoClose]="false">
       <mat-icon>filter_alt</mat-icon>
     </button>
   </div>
@@ -46,7 +46,7 @@
     <div class="shipment-detail__child">
       <div class="status">{{item.Status}}</div>
       <div>{{'shipments.Shipment.assignedToUserId' | translate}} {{item.AssignedToUserId}}</div>
-      <div>{{'shipments.Shipment.expectedShipmentDate' | translate}} {{item.ExpectedShipmentDate}}</div>
+      <div><span *ngIf="item.DeliveryMethod == 'PICK'">{{'shipments.Shipment.expectedShipmentDate' | translate}}</span> <span *ngIf="item.DeliveryMethod == 'SHP'">{{ "shipmentdetail.expectedshipmentdate" | translate }}</span>: {{item.ExpectedShipmentDate}}</div>
     </div>
     <div class="shipment-detail__child">
       <div>{{'shipments.shipment.customerinfo' | translate}}</div>

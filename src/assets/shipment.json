@@ -53,7 +53,7 @@
                 "ShipNode": "Mtrx_Store_2",
                 "ShipmentKey": "PICK1000002_SHPKEY",
                 "ShipmentNo": "PICK1000002SHPNO",
-                "Status": "Ready for Backroom Pick",
+                "Status": "Backroom Pick In Progress",
                 "BillToAddress": {
                     "DayPhone": "2345678901",
                     "EMailID": "bsmith@org.com",
@@ -74,7 +74,7 @@
                 "ShipNode": "Mtrx_Store_3",
                 "ShipmentKey": "PICK1000003_SHPKEY",
                 "ShipmentNo": "PICK1000003SHPNO",
-                "Status": "Ready for Backroom Pick",
+                "Status": "Backroom Pick In Progress",
                 "BillToAddress": {
                     "DayPhone": "3456789012",
                     "EMailID": "cjones@org.com",
@@ -214,14 +214,14 @@
             },
             {
                 "AssignedToUserId": "user9",
-                "DeliveryMethod": "PICK",
+                "DeliveryMethod": "SHP",
                 "ExpectedShipmentDate": "09-11-2017",
-                "OrderNo": "PICK1000010",
+                "OrderNo": "SHP1000010",
                 "ScacAndService": "",
                 "ShipNode": "Mtrx_Store_10",
                 "ShipmentKey": "PICK1000010_SHPKEY",
                 "ShipmentNo": "PICK1000010SHPNO",
-                "Status": "Ready for Backroom Pick",
+                "Status": "Shipped",
                 "BillToAddress": {
                     "DayPhone": "0123456789",
                     "EMailID": "kwhite@org.com",
@@ -242,7 +242,7 @@
                 "ShipNode": "Mtrx_Store_11",
                 "ShipmentKey": "PICK1000011_SHPKEY",
                 "ShipmentNo": "PICK1000011SHPNO",
-                "Status": "Ready for Backroom Pick",
+                "Status": "Ready for Customer Pickup",
                 "BillToAddress": {
                     "DayPhone": "1234567890",
                     "EMailID": "lmiller@org.com",

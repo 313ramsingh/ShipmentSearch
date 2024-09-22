@@ -299,7 +299,7 @@
         },
         {
             "AssignedToUserId": "user1",
-            "Status": "Ready for Backroom Pick",
+            "Status": "Backroom Pick In Progress",
             "DeliveryMethod": "PICK",
             "ExpectedShipmentDate": "01-11-2017",
             "OrderNo": "PICK1000002",
@@ -402,7 +402,7 @@
         },
         {
             "AssignedToUserId": "user2",
-            "Status": "Ready for Backroom Pick",
+            "Status": "Backroom Pick In Progress",
             "DeliveryMethod": "PICK",
             "ExpectedShipmentDate": "02-11-2017",
             "OrderNo": "PICK1000003",
@@ -967,10 +967,10 @@
         },
         {
             "AssignedToUserId": "user9",
-            "Status": "Ready for Backroom Pick",
-            "DeliveryMethod": "PICK",
+            "Status": "Shipped",
+            "DeliveryMethod": "SHP",
             "ExpectedShipmentDate": "09-11-2017",
-            "OrderNo": "PICK1000010",
+            "OrderNo": "SHP1000010",
             "ScacAndService": "",
             "ShipmentKey": "PICK1000010_SHPKEY",
             "ShipmentNo": "PICK1000010SHPNO",
@@ -1046,7 +1046,7 @@
         },
         {
             "AssignedToUserId": "user10",
-            "Status": "Ready for Backroom Pick",
+            "Status": "Ready for Customer Pickup",
             "DeliveryMethod": "PICK",
             "ExpectedShipmentDate": "10-11-2017",
             "OrderNo": "PICK1000011",

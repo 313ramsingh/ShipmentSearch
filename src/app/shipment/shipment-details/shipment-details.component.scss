@@ -9,16 +9,31 @@ img {
     margin-top: 0;
     padding: 0.25rem;
     background: #Ffffff;
-    transition: box-shadow 0.3s ease; /* Add smooth transition */
+    transition: box-shadow 0.3s ease; 
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
 
     &__content {
         margin: .5rem;
         background: #F5F5f5;
+        position: relative;
 
         &__child {
             flex: 1;
+
+            .shipment-no {
+               color: purple;   
+            }
         }
+
+        .info {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: .85rem;
+            color: skyblue; 
+            cursor: pointer;
+            font-weight: 600;
+          }
     }
 
     &__records {
@@ -57,5 +72,11 @@ img {
         }
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .hide-sm {
+        display: none;
+    }
+  }
 
 
